@@ -1,0 +1,94 @@
+﻿@charset "UTF-8" ;
+
+body {
+	width: 100% ;
+	padding: 0 ;
+}
+
+button.button {
+
+    /* ボーダーをなくす */ 
+    border-style: none; 
+
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+ 
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #000; 
+
+    /* グラデーションの指定 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #3333ff), color-stop(1.00, #6666ff));
+    background: -webkit-linear-gradient(#3333ff, #6666ff);
+    background: -moz-linear-gradient(#3333ff, #6666ff);
+    background: -o-linear-gradient(#3333ff, #6666ff);
+    background: -ms-linear-gradient(#3333ff, #6666ff);
+    background: linear-gradient(#3333ff, #6666ff);
+    
+    /* 文字色 */    
+    color: #fff;
+    
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 19px;
+    width: 110px;
+    height: 45px;
+    vertical-align: top;
+}
+
+select[name="sample"] {
+    -webkit-appearance: button; 
+    -moz-appearance: button; 
+    appearance: button; 
+}
+
+#submenu-content {
+	width: 50% ;
+	margin: 0 ;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: #fff ;
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+}
+
+
+
+#modal-overlay {
+	z-index: 1 ;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+
+.button-link {
+
+	color: #00f ;
+
+	text-decoration: underline ;
+
+}
+.button-link:hover {
+
+	cursor: pointer ;
+
+	color: #f00 ;
+}

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ダブルタップによる拡大禁止 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"> 
+
+    <title>サイトのタイトル</title>
+
+    <link type="text/css" rel="stylesheet" href="js/ui-1.11.4/jquery-ui.min.css" />
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/ui-1.11.4/jquery-ui.min.js"></script>
+
+    <!-- スタイルシートの読み込み -->
+    <link href="teachmain.css" rel="stylesheet" />
+    <link href="menu.css" rel="stylesheet" />
+    <link href="dlgSpeed.css" rel="stylesheet" />
+    <link href="settingMenu.css" rel="stylesheet" />
+</head>
+<body>
+    <!--
+    ***********************************************************************
+    * menu
+    ***********************************************************************
+    -->
+    <div class="boxMenu">
+	    <form action="#" method="post">
+		    <button type="button" class="button" onclick="click_menu()">Menu▼</button>
+		    <button type="button" class="button" onclick="click_moveTo()">MoveTo</button>
+                    <!--
+		    <button type="button" class="button" onclick="click_chkMotion()">Check Motion</button>
+                    -->
+		    <button type="button" class="button" onclick="click_mdi()">MDI</button>
+		    <button type="button" class="button" onclick="click_monitor()">Monitor</button>
+	    </form>
+    </div>
+    <!--
+    ***********************************************************************
+    * setting menu
+    ***********************************************************************
+    -->
+    <div class="boxSetting">
+        <ul class="dropmenu">
+            <!--
+            <li><a class="menuTop">Level ▼<br /><span id="selspn">1</span></a>
+                <ul id="menuItem">
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                </ul>
+            </li>
+            -->
+            <li><a class="menuTop">Task ▼<br /><span id="selspn">2</span></a>
+                <ul id="menuItem">
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                </ul>
+            </li>
+            <li><a class="menuTop">Coord ▼<br /><span id="selspn">XY</span></a>
+                <ul id="menuItem">
+                    <li><a>XY</a></li>
+                    <li><a>JOINT</a></li>
+                </ul>
+            </li>
+            <li><a class="menuTop" onclick="clickSpeed()">Speed ▼<br /><span id="selspn">35%</span></a></li>
+                <ul id="menuItem">
+                </ul>
+            <li><a class="menuTop">Hand ▼<br /><span id="selspn">Right</span></a>
+                <ul id="menuItem">
+                    <li><a>Left</a></li>
+                    <li><a>Right</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--
+    ***********************************************************************
+    * Info Area
+    ***********************************************************************
+    -->
+    <div>
+        <!--
+        *******************************************************************
+        * Current Position
+        *******************************************************************
+        -->
+        <div class="boxPos">
+            <p class="titlePos">Current Position</p>
+            <div class="boxDispArea">
+                <ul class="pos">
+                    <table id="tblPosition">
+                        <tr><th>AX1:</th><td id="ax1_value"></td></tr>
+                        <tr><th>AX2:</th><td id="ax2_value"></td></tr>
+                        <tr><th>AX3:</th><td id="ax3_value"></td></tr>
+                        <tr><th>AX4:</th><td id="ax4_value"></td></tr>
+                        <tr><th>AX5:</th><td id="ax5_value"></td></tr>
+                        <tr><th>AX6:</th><td id="ax6_value"></td></tr>
+                        <tr><th></th><td></td></tr>
+                        <tr><th></th><td></td></tr>
+                    </table>
+                </ul>
+            </div>
+            <p class="infoPos">
+                H: <span class="spnHand">Right</span><br />
+                C: <span class="spnCoord">XY</span>
+            </p>
+        </div>
+        <!--
+        *******************************************************************
+        * THome
+        *******************************************************************
+        -->
+        <div class="boxTHome">
+            <p class="titlePos">THOME</p>
+            <div class="boxDispArea">
+                <ul class="pos">
+                    <table id="tblTHome">
+                        <!--
+                        <tr><th>X:</th><td>-76.443</td></tr>
+                        <tr><th>Y:</th><td>-76.443</td></tr>
+                        <tr><th>Z:</th><td>-76.443</td></tr>
+                        <tr><th>S:</th><td>-76.443</td></tr>
+                        <tr><th></th><td>-76.443</td></tr>
+                        <tr><th></th><td>-76.443</td></tr>
+                        <tr><th></th><td>-76.443</td></tr>
+                        <tr><th></th><td>-76.443</td></tr>
+                        -->
+                    </table>
+                </ul>
+            </div>
+            <p class="infoTHome">
+                H: <span class="spnHand">Right</span><br />
+                C: <span class="spnCoord">XY</span>
+            </p>
+        </div>
+        <!--
+        *******************************************************************
+        * File
+        *******************************************************************
+        -->
+        <div class="boxFile">
+            <p class="titleFile">file:ROBOT.DAT</p>
+            <div class="boxDispArea">
+                <ul class="pos">
+                    <table id="tblFile">
+                        <!--
+                        <tr><th>THONE</th></tr>
+                        <tr><th>TP[1]</th></tr>
+                        <tr><th>TP[2]</th></tr>
+                        <tr><th>TP[3]</th></tr>
+                        <tr><th>TP[4]</th></tr>
+                        <tr><th>TP[5]</th></tr>
+                        <tr><th>TP[6]</th></tr>
+                        <tr><th>TP[7]</th></tr>
+                        <tr><th>TP[8]</th></tr>
+                        -->
+                    </table>
+                </ul>
+            </div>
+            <div class="boxFileButton">
+                <button type="button" class="btnFile">Pos&<br/>Position</button>
+                <button type="button" class="btnFile">Expand</button>
+                <button type="button" class="btnFile">All</button>
+            </div>
+        </div>
+    </div>
+    <!--
+    *******************************************************************
+    * Action Button Area
+    *******************************************************************
+    -->
+    <div class="boxAction">
+        <div class="boxOut">
+            <button type="button" class="buttonOut">OUT1</button>
+            <button type="button" class="buttonOut">OUT2</button>
+            <button type="button" class="buttonOut">OUT3</button>
+        </div>
+        <div class="boxOut2">
+            <button type="button" class="buttonOut2">Payload<br/>ON</button>
+            <button type="button" class="buttonOut2">Replace</button>
+        </div>
+    </div>
+
+    <!--
+    *******************************************************************
+    * Speed Dialog
+    *******************************************************************
+    -->
+    <div id="dlgSpeed" title="Pitch & Speed XY">
+        <div>
+
+            <!-- Pitch 1 -->
+            <div class="boxPitch1">
+                <form action="#">
+                    <button type="button" class="btnTitle" onclick="click_Pitch1">Pitch1</button>
+                    <table id="tblPitch">
+                        <tr>
+                            <th>X:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Y:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Z:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <!-- Pitch 2 -->
+            <div class="boxPitch2">
+                <form action="#">
+                    <button type="button" class="btnTitle" onclick="click_Pitch2">Pitch2</button>
+                    <table id="tblPitch">
+                        <tr>
+                            <th>X:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Y:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Z:</th>
+                            <td><textarea readonly rows=1>0.001</textarea></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <!-- Speed -->
+            <div class="boxSpeed">
+                <form action="#">
+                    <button type="button" class="btnTitle" onclick="click_Speed">Speed</button>
+                    <input id="rangeSpeed" type="range" min="0" max="100" step="1" />
+                    <span id="valueSpeed"></span>
+                    <button type="button" class="btnRange" id="btnRangeUp">▲</button>
+                    <button type="button" class="btnRange" id="btnRangeDown">▼</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    *******************************************************************
+    * Ten-Key Dialog
+    *******************************************************************
+    -->
+    <div id="dlgTenKey" title="">
+        <table id="tenkey" width="100%">
+            <tr>
+                <td id="tenkey-7" onclick="keyin('7')"><a class="wButton">7</a></td>
+                <td id="tenkey-8" onclick="keyin('8')"><a class="wButton">8</a></td>
+                <td id="tenkey-9" onclick="keyin('9')"><a class="wButton">9</a></td>
+                <td id="tenkey-BS" onclick="keyin('bs')"><a class="wButton">BS</a></td>
+            </tr>
+            <tr>
+                <td id="tenkey-4" onclick="keyin('4')"><a class="wButton">4</a></td>
+                <td id="tenkey-5" onclick="keyin('5')"><a class="wButton">5</a></td>
+                <td id="tenkey-6" onclick="keyin('6')"><a class="wButton">6</a></td>
+                <td id="tenkey-P" onclick="keyin('prev')"><a class="wButton">▲</a></td>
+            </tr>
+            <tr>
+                <td id="tenkey-1" onclick="keyin('1')"><a class="wButton">1</a></td>
+                <td id="tenkey-2" onclick="keyin('2')"><a class="wButton">2</a></td>
+                <td id="tenkey-3" onclick="keyin('3')"><a class="wButton">3</a></td>
+                <td id="tenkey-N" onclick="keyin('next')"><a class="wButton">▼</a></td>
+            </tr>
+            <tr>
+                <td id="tenkey-0" onclick="keyin('0')"><a class="wButton">0</a></td>
+                <td id="tenkey-dot" onclick="keyin('.')"><a class="wButton">.</a></td>
+                <td id="tenkey-pm" onclick="keyin('-')"><a class="wButton">+/-</a></td>
+                <td id="tenkey-ret" onclick="keyin('ret')"><a class="wButton">RET.</a></td>
+            </tr>
+        </table>
+    </div>
+
+	<!-- JavaScriptの読み込み -->
+	<script type="text/javascript" src="dlgSpeed.js"></script>
+	<script type="text/javascript" src="settingMenu.js"></script>
+	<script type="text/javascript" src="teachmain.js"></script>
+</body>
+</html>

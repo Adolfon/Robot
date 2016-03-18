@@ -1,0 +1,327 @@
+﻿@charset "UTF-8" ;
+
+body {
+    width: 100% ;
+    padding: 0 ;
+
+    user-select: none; /* CSS3 */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari、Chromeなど */
+    -ms-user-select: none; /* IE10かららしい */
+    unselectable="on";
+}
+
+div.boxMenu 
+{
+    margin: 0px;
+}
+
+div.boxSetting 
+{
+    margin-top: 10px;
+}
+
+div.boxPos
+{
+    margin-top: 10px;
+    padding: 0px;
+    float: left;
+    
+    /* サイズ */ 
+    width: 330px;
+    height: 440px;
+    
+    /* グラデーションの指定 */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #80ff80), color-stop(1.00, #aaffaa));
+    background: -webkit-linear-gradient(#80ff80, #aaffaa);
+    background: -moz-linear-gradient(#80ff80, #aaffaa);
+    background: -o-linear-gradient(#80ff80, #aaffaa);
+    background: -ms-linear-gradient(#80ff80, #aaffaa);
+    background: linear-gradient(#80ff80, #aaffaa);
+}
+
+div.boxTHome
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    float:left;
+    
+    /* サイズ */ 
+    width: 330px;
+    height: 440px;
+    
+    /* グラデーションの指定 */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #80ff80), color-stop(1.00, #aaffaa));
+    background: -webkit-linear-gradient(#80ff80, #aaffaa);
+    background: -moz-linear-gradient(#80ff80, #aaffaa);
+    background: -o-linear-gradient(#80ff80, #aaffaa);
+    background: -ms-linear-gradient(#80ff80, #aaffaa);
+    background: linear-gradient(#80ff80, #aaffaa);
+}
+
+div.boxFile
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    float:left;
+    
+    /* サイズ */ 
+    width: 330px;
+    height: 440px;
+    
+    /* グラデーションの指定 */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #80ff80), color-stop(1.00, #aaffaa));
+    background: -webkit-linear-gradient(#80ff80, #aaffaa);
+    background: -moz-linear-gradient(#80ff80, #aaffaa);
+    background: -o-linear-gradient(#80ff80, #aaffaa);
+    background: -ms-linear-gradient(#80ff80, #aaffaa);
+    background: linear-gradient(#80ff80, #aaffaa);
+}
+
+div.boxDispArea {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #ffffff;
+    height: 340px;
+}
+
+div.boxFileButton {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div.boxAction
+{
+    margin-top: 10px;
+    float: left;
+}
+
+div.boxOut
+{
+    float: left;
+}
+
+div.boxOut2 
+{
+    position: absolute;
+    left: 700px;
+}
+ 
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+ul.pos table
+{
+    margin-top: 10px;
+    table-layout: fixed;
+    width: 300px;
+}
+
+ul.pos th
+{
+    width:25%;
+    height: 23px;
+    font-size: 23px;
+    font-weight: bold;
+    /*color: #004080;*/
+    text-align: left;
+    padding-left: 20px;
+}
+
+ul.pos td
+{
+    width:75%;
+    height: 23px;
+    font-size: 23px;
+    font-weight: bold;
+    padding-right: 20px;
+    /*color: #004080;*/
+    text-align: right;
+}
+
+#tblPosition
+{
+    color: Orange;
+}
+
+#tblTHome
+{
+    color: Navy;
+}
+ 
+select.dataList {
+     margin: 0;
+     padding: 0;
+     margin-top: 5px; 
+     margin-left: 10px; 
+     text-align: left;
+     border: none;
+     font-size: 21px;
+     color: #004080;
+     font-weight: bold;
+     width: 295px;
+     height: 330px;
+ }
+
+button.btnFile {
+
+    /* ボーダーをなくす */ 
+    border-style: none; 
+
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+ 
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #000; 
+
+    /* グラデーションの指定 
+    background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d); 
+    background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d)); 
+    */
+    background-color: #b3b3ff;
+
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 14px;
+    text-align: center;
+    
+    
+    width: 60px;
+    height: 40px;
+    vertical-align: top;
+}
+
+button.buttonOut {
+
+    /* ボーダーをなくす */ 
+    border-style: none; 
+
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+ 
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #000; 
+
+    /* グラデーションの指定 */ 
+    background: -moz-linear-gradient(bottom, #ffaf75, #ffcba4 50%, #ffaf75); 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffaf75), color-stop(0.5, #ffcba4), to(#ffaf75)); 
+    background-color: #ffd2a6;
+
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 19px;
+    
+    width: 120px;
+    height: 45px;
+    vertical-align: top;
+}
+
+button.buttonOut2 {
+
+    /* ボーダーをなくす */ 
+    border-style: none; 
+
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+ 
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #000; 
+
+    /* グラデーションの指定 */ 
+    background: -moz-linear-gradient(bottom, #f1e91a, #f7f6f3 50%, #f1e91a); 
+    background: -webkit-gradient(linear, left bottom, left top, from(#f1e91a), color-stop(0.5, #f7f36f), to(#f1e91a)); 
+    background-color: #ffffa0;
+
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 15px;
+    
+    width: 100px;
+    height: 40px;
+    vertical-align: top;
+}
+
+.titlePos {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: Blue;
+}
+
+.titleFile {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoPos {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    color: Orange;
+    line-height: 22px;
+}
+
+.infoTHome {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    color: Navy;
+    line-height: 22px;
+}
+

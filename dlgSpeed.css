@@ -1,0 +1,243 @@
+﻿@charset "UTF-8" ;
+
+div.dlgSpeed
+{
+    width: 500px;
+}
+
+div.boxPitch1 
+{
+    float: left;
+    
+    width: 200px;
+    height: 300px;
+
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+div.boxPitch2 
+{
+    float: left;
+    margin-left: 10px;
+    
+    width: 200px;
+    height: 300px;
+    
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+div.boxSpeed
+{
+    float: left;
+    margin-left: 10px;
+    
+    width: 200px;
+    height: 300px;
+
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+button.btnTitle 
+{
+    margin-top: 5px;
+    margin-left: 5px;
+
+    /* ボーダーをなくす */ 
+    border-style: none; 
+
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+ 
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #000; 
+
+    /* グラデーションの指定 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #3333ff), color-stop(1.00, #6666ff));
+    background: -webkit-linear-gradient(#3333ff, #6666ff);
+    background: -moz-linear-gradient(#3333ff, #6666ff);
+    background: -o-linear-gradient(#3333ff, #6666ff);
+    background: -ms-linear-gradient(#3333ff, #6666ff);
+    background: linear-gradient(#3333ff, #6666ff);
+    
+    /* 文字色 */    
+    color: #fff;
+    
+    /* 角丸の指定 */ 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 16px;
+    width: 190px;
+    height: 30px;
+    vertical-align: top;
+}
+
+#rangeSpeed 
+{
+    margin-left:-20%;
+    margin-top:71%;
+    
+    width: 220px;
+    height: 10px;
+
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #666;
+	text-align:center;
+	border:1px solid transparent;
+	border-radius:20px;
+	cursor:pointer;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+
+}
+
+#valueSpeed 
+{
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+
+#btnRangeUp
+{
+    position: absolute;
+    left: 550px;
+    top: 140px;
+    width: 40px;
+    height: 40px;
+}
+
+#btnRangeDown
+{
+    position: absolute;
+    left: 550px;
+    top: 255px;
+    width: 40px;
+    height: 40px;
+}
+
+#tenkey 
+{
+    width: 250px;;
+    height: 250px;
+    border-collapse: collapse;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#tenkey td
+{
+    width:25%;
+    height:25%;
+    padding: 6px;
+    text-align: center;
+    vertical-align:middle;
+    color: #666666;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    
+    /* グラデーションの指定 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #e8ffe8), color-stop(1.00, #52fec6));
+    background: -webkit-linear-gradient(#e8ffe8, #52fec6);
+    background: -moz-linear-gradient(#e8ffe8, #52fec6);
+    background: -o-linear-gradient(#e8ffe8, #52fec6);
+    background: -ms-linear-gradient(#e8ffe8, #52fec6);
+    background: linear-gradient(#e8ffe8, #52fec6);
+}
+
+#tblPitch
+{
+    margin-top: 10px;
+    table-layout: fixed;
+    width: 200px;
+}
+
+#tblPitch th 
+{
+    width:25%;
+    height: 23px;
+    font-size: 18px;
+}
+
+#tblPitch td 
+{
+    width:75%;
+    height: 23px;
+    font-size: 18px;
+    text-align: right;
+
+    padding-right: 10px;
+}
+ 
+.ui-widget-overlay {
+     background: #AAA url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+     opacity: .30;
+     filter: Alpha(Opacity=30);
+}
+
+#tblPitch textarea
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    outline: none;
+
+    border: none;
+    background-color: transparent;
+
+    resize: none;
+
+    width: 135px;
+    height: 21px;
+    line-height: 1.2;
+
+    text-align: right;
+    vertical-align: middle;
+
+    font-size: 18px;
+}

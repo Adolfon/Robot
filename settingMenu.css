@@ -1,0 +1,131 @@
+﻿@charset "UTF-8" ;
+
+.dropmenu
+{
+    *zoom: 1;
+    list-style-type: none;
+    width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+.dropmenu:before, .dropmenu:after
+{
+    content: "";
+    display: table;
+}
+
+.dropmenu:after
+{
+    clear: both;
+}
+
+.dropmenu li
+{
+    position: relative;
+    width: 90px;
+    float: left;
+    padding: 0;
+    text-align: center;
+}
+
+
+.dropmenu li a
+{
+    display: block;
+    margin: 0;
+    padding : 5px 0 5px;
+    color: #0070ff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+  
+  margin-right: 5px;
+}
+
+
+.dropmenu li ul
+{
+    list-style: none;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.dropmenu li ul li
+{
+    width: 100%;
+}
+
+.dropmenu li ul li a
+{
+    padding: 13px 15px;
+    border-top: 1px solid #008080;
+    background: #A0A0ff;
+
+    color: Teal;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/*
+.dropmenu li:hover > a
+{
+    background: #6e7c0c;
+}
+
+.dropmenu li a:hover
+{
+  background: #616d0b;
+}
+*/
+
+
+#selspn
+{
+    color:Teal;
+}
+
+.menuTop 
+{
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    border-style: none; 
+    
+    /* ボタンの影の指定 
+     * 影の横幅を2px 
+     * 縦長を2px 
+     * ぼかしを3px 
+     * 広がりを1px 
+     * 色を#666（グレー）に指定 */ 
+    box-shadow: 2px 2px 3px 1px #666; 
+    -moz-box-shadow: 2px 2px 3px 1px #666; 
+    -webkit-box-shadow: 2px 2px 3px 1px #666; 
+    
+    /* テキストの影の指定 
+     * 影の横幅を1px 
+     * 縦長を1px 
+     * ぼかしを2px 
+     * 色を#000（黒）に指定 */ 
+    text-shadow: 1px 1px 2px #999;
+    
+    /* グラデーションの指定 */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #9f9fff), color-stop(1.00, #b3b3ff));
+    background: -webkit-linear-gradient(#9f9fff, #b3b3ff);
+    background: -moz-linear-gradient(#9f9fff, #b3b3ff);
+    background: -o-linear-gradient(#9f9fff, #b3b3ff);
+    background: -ms-linear-gradient(#9f9fff, #b3b3ff);
+    background: linear-gradient(#9f9fff, #b3b3ff);
+    
+    color: #0080ff;
+}
